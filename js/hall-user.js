@@ -35,11 +35,13 @@ fetch('https://shfe-diplom.neto-server.ru/alldata')
       }
     })
 
+    fetch( `https://shfe-diplom.neto-server.ru/hallconfig?seanceId=${chosenSeanceId}&date=${seanceDate}` )
+    .then( response => response.json())
+    .then( data => {renderSeats(data.result)});
+
     halls.forEach((hall) => {
 
       if (hallName.innerHTML === hall.hall_name) {
-
-        renderSeats(hall.hall_config);
 
         let standartPriceValue = document.getElementById('standart-price');
         let vipPriceValue = document.getElementById('vip-price');
@@ -138,7 +140,7 @@ function renderSeats(seats) {
 
   renderedSeats = document.querySelectorAll('.field');
   renderedSeats.forEach((seat) => {
-    if (!seat.classList.contains('chair_disabled')) {
+    if (!seat.classList.contains('chair_disabled') && !seat.classList.contains('chair_taken')) {
       seat.onclick = function (event) {
         if (seat.classList.contains('chair_selected')) {
           seat.classList.remove('chair_selected');
@@ -148,6 +150,5 @@ function renderSeats(seats) {
       };
     }
   })
-
 
 }
