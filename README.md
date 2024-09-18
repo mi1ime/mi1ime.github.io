@@ -1,1 +1,1 @@
-Github Page: https://github.com/mi1ime/mi1ime.github.io
+Github Page: https://mi1ime.github.io/
