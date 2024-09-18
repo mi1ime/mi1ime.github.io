@@ -1,0 +1,126 @@
+@media (min-width: 641px) and (max-width: 1200px) {
+    .h2-popup {
+        width: 684px;
+    }
+
+    .btns-wrapper-popup {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        column-gap: 14px;
+        margin-top: 34px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header {
+        width: 768px;
+    }
+
+    .header-index {
+        width: 622px;
+        padding: 35px 42px 35px 104px;
+    }
+
+    .logo {
+        margin-left: 14px;
+    }
+
+    main {
+        width: 768px;
+    }
+
+    .conf-step-popup {
+        width: 768px;
+    }
+
+    .conf-step {
+        width: 768px;
+    }
+
+    .conf-step__wrapper {
+        padding-left: 73px;
+    }
+
+    .main-section {
+        width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .movie-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 15px;
+    }
+
+
+    .heading-2 {
+        height: 55px;
+        display: flex;
+        align-items: center;
+    }
+
+    .h2 {
+        width: 560px;
+        padding-left: 84px;
+        padding-right: 84px;
+    }
+
+    .h2:before {
+        width: 36px;
+        height: 36px;
+        border-radius: 36px;
+        top: -9px;
+        left: 20px;
+    }
+
+    .h2:after {
+        left: calc(100% - 52px);
+    }
+
+    .section:before {
+        position: absolute;
+
+        width: 1px;
+        height: 100%;
+
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 61px;
+        background-color: #BC95D6;
+        z-index: 1;
+    }
+
+    .first-section:before {
+        position: absolute;
+
+        width: 1px;
+        height: calc(100% - top);
+
+        content: "";
+        top: 35px;
+        bottom: 0;
+        right: 0;
+        left: 61px;
+        background-color: #BC95D6;
+        z-index: 1;
+    }
+
+    .last-section:before {
+        position: absolute;
+
+        width: 1px;
+        height: 30px;
+
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 61px;
+        background-color: #BC95D6;
+        z-index: 1;
+    }
+}

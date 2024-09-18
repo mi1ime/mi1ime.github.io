@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Diplom</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_index.css">
+  <link rel="stylesheet" href="css/style_tablet.css">
+  <link rel="stylesheet" href="css/style_desktop.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header header-index">
+    <div class="logo">
+      <h1>Идём<span class="logo-V">в</span>кино</h1>
+      <div class="logo-admin">Администраторррская</div>
+    </div>
+
+  </header>
+
+  <div class="popup popup__add-hall visually-hidden">
+
+    <div class="conf-step-popup">
+      <header class="heading-2-popup">
+        <h2 class="h2-popup">Добавление зала</h2>
+        <button class="popup-x popup-x__add-hall"></button>
+      </header>
+      <div class="conf-step-popup__wrapper">
+        <form class="form-popup">
+
+          <div class="form-popup-wrapper">
+            <label for="hall-name" class="form-text">Название зала</label>
+            <input id="hall-name" name="hall-name" placeholder="Например, «Зал 1»">
+          </div>
+
+        </form>
+
+        <div class="btns-wrapper-popup">
+          <button class="btn btn-popup add-hall">Добавить зал</button>
+          <button class="btn btn-popup cancel-popup cancel-popup__add-hall">Отменить</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="popup popup__add-movie visually-hidden">
+
+    <div class="conf-step-popup">
+      <header class="heading-2-popup">
+        <h2 class="h2-popup">Добавление фильма</h2>
+        <button class="popup-x popup-x__add-movie"></button>
+      </header>
+      <div class="conf-step-popup__wrapper">
+        <form class="form-popup">
+
+          <div class="form-popup-wrapper">
+            <label for="movie-name" class="form-text">Название фильма</label>
+            <input id="movie-name" name="movie-name" placeholder="Например, «Гражданин Кейн»" required>
+          </div>
+          <div class="form-popup-wrapper">
+            <label for="movie-duration" class="form-text">Продолжительность фильма (мин.)</label>
+            <input type="number" id="movie-duration" name="movie-duration" required>
+          </div>
+          <div class="form-popup-wrapper">
+            <label for="movie-synopsis" class="form-text">Описание фильма</label>
+            <input id="movie-synopsis" name="movie-synopsis" required>
+          </div>
+          <div class="form-popup-wrapper">
+            <label for="movie-country" class="form-text">Страна</label>
+            <input id="movie-country" name="movie-country" required>
+          </div>
+          
+        </form>
+
+          <div class="btns-wrapper-popup">
+          <!-- <label for="file-submit" class="btn btn-popup create-movie">Добавить фильм</label>
+            <input type="submit" id="file-submit" disabled /> -->
+            <button class="btn btn-popup create-movie">Добавить фильм</button>
+            <label for="upload-poster" class="btn btn-popup upload-poster pointer">Загрузить постер</label>
+            <input type="file" id="upload-poster" name="upload-poster" accept="image/png" />
+            <button class="btn btn-popup cancel-popup cancel-popup__add-movie">Отменить</button>
+          </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="popup popup__add-seance visually-hidden">
+
+    <div class="conf-step-popup">
+      <header class="heading-2-popup">
+        <h2 class="h2-popup">Добавление сеанса</h2>
+        <button class="popup-x popup-x__add-seance"></button>
+      </header>
+      <div class="conf-step-popup__wrapper">
+        <form class="form-popup">
+
+          <div class="form-popup-wrapper">
+            <label for="halls" class="form-text">Название зала</label>
+            <select id="halls" name="halls">
+              <!-- <option>Зал 1</option> -->
+            </select>
+          </div>
+
+          <div class="form-popup-wrapper">
+            <label for="movie-names" class="form-text">Название фильма</label>
+            <select id="movie-names" name="movie-names">
+              <!-- <option>Звёздные войны XXIII: Атака клонированных клонов</option> -->
+            </select>
+          </div>
+
+          <div class="form-popup-wrapper">
+            <label for="movie-start-time" class="form-text">Время начала</label>
+            <input type="time" id="movie-start-time" name="movie-start-time">
+          </div>
+
+        </form>
+
+        <div class="btns-wrapper-popup">
+          <button class="btn btn-popup add-movie add-movie__add-seance">Добавить фильм</button>
+          <button class="btn btn-popup cancel-popup cancel-popup__add-seance">Отменить</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="popup popup__delete-seance visually-hidden">
+
+    <div class="conf-step-popup">
+      <header class="heading-2-popup">
+        <h2 class="h2-popup">Снятие сеанса</h2>
+        <button class="popup-x popup-x__delete-seance"></button>
+      </header>
+      <div class="conf-step-popup__wrapper">
+        
+        <span class="delete-seance-text">Вы действительно хотите снять с сеанса фильм "<span class="delete-seance__film-title"></span>"?</span>
+
+        <div class="btns-wrapper-popup">
+          <button class="btn btn-popup delete-seance">Удалить</button>
+          <button class="btn btn-popup cancel-popup cancel-popup__delete-seance">Отменить</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <main>
+
+    <section class="conf-step">
+      <header class="heading-2">
+        <h2 class="h2">Управление залами</h2>
+      </header>
+      <div class="conf-step__wrapper">
+        <div class="conf-step-content">
+
+          <div>
+            <h3>Доступные залы:</h3>
+            <ul class="ul-hall">
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="btn-wrapper">
+          <button class="btn btn-center create-hall">Создать зал</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="conf-step">
+      <header class="heading-2">
+        <h2 class="h2">Конфигурация залов</h2>
+      </header>
+      <div class="conf-step__wrapper">
+        <div class="conf-step-content conf-step__hall-config-content">
+
+          <div>
+            <h3>Выберите зал для конфигурации:</h3>
+            <ul class="selectors hall-config-selectors">
+            </ul>
+          </div>
+
+          <div class="hall-config-content hall-config-content__active">
+            <div>
+              <h3>Укажите количество рядов и максимальное количество кресел в ряду:</h3>
+              <form class="legend">
+                <div class="legend-wrapper">
+                  <label for="rows" class="form-text">Рядов, шт</label>
+                  <input type="number" id="rows" name="rows" placeholder="10" class="legend-input">
+                </div>
+                <span class="x">x</span>
+                <div class="legend-wrapper">
+                  <label for="places" class="form-text">Мест, шт</label>
+                  <input type="number" id="places" name="places" placeholder="8" class="legend-input">
+                </div>
+              </form>
+            </div>
+            
+            <div class="hall-scheme">
+
+              <h3>Теперь вы можете указать типы кресел на схеме зала:</h3>
+
+              <div class="hall-scheme-wrapper">
+
+                <div class="eg-chairs">
+                  <div class="eg-chair pointer">
+                    <div id="standart" class="eg-chair-style eg-chair-btn chair_normal"></div>
+                    <span> — обычные кресла</span>
+                  </div>
+                  <div class="eg-chair pointer">
+                    <div id="vip" class="eg-chair-style eg-chair-btn chair_vip"></div>
+                    <span> — VIP кресла</span>
+                  </div>
+                  <div class="eg-chair pointer">
+                    <div id="disabled" class="eg-chair-style eg-chair-btn chair_blocked"></div>
+                    <span> — заблокированные (нет кресла)</span>
+                  </div>
+                </div>
+
+                <span>Чтобы изменить вид кресла, нажмите по нему</span>
+
+                <div class="hall">
+                  <div class="hall-wrapper">
+                    <div id="seats"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        
+        <div class="btns-wrapper">
+          <button id="btn-cancel-hall-config" class="btn cancel">Отмена</button>
+          <button id="btn-hall-config" class="btn save">Сохранить</button>
+        </div>
+
+    </section>
+
+    <section class="conf-step">
+      <header class="heading-2">
+        <h2 class="h2">Конфигурация цен</h2>
+      </header>
+      <div class="conf-step__wrapper">
+        <div class="conf-step-content">
+
+          <div>
+            <h3>Выберите зал для конфигурации:</h3>
+            <ul class="selectors price-config-selectors">
+            </ul>
+          </div>
+
+          <div>
+            <h3>Установите цены для типов кресел:</h3>
+            <form class="form">
+
+              <label for="price" class="form-text">Цена, рублей</label>
+              <div class="form-wrapper">
+                <input type="number" id="price" name="price" placeholder="0" class="form-input">
+                <span>за</span>
+                <div class="eg-chair-style chair_normal"></div><span>обычные кресла</span>
+              </div>
+
+              <label for="vip-price" class="form-text">Цена, рублей</label>
+              <div class="form-wrapper">
+                <input type="number" id="vip-price" name="vip-price" placeholder="0" class="form-input">
+                <span>за</span>
+                <div class="eg-chair-style chair_vip"></div><span>VIP кресла</span>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+        <div class="btns-wrapper">
+          <button id="btn-cancel-price-config" class="btn cancel">Отмена</button>
+          <button id="btn-price-config" class="btn save">Сохранить</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="conf-step">
+      <header class="heading-2">
+        <h2 class="h2">Сетка сеансов</h2>
+      </header>
+      <div class="conf-step__wrapper">
+        <div class="conf-step-content">
+
+          <div class="btn-wrapper">
+            <button class="btn btn-add-movie">Добавить фильм</button>
+          </div>
+
+          <div class="movie-list">
+
+            <!-- <div class="movie-item" draggable="true">
+              <img src="img/movie-poster.png" alt="Постер к фильму" class="movie-poster">
+              <div class="movie-item-content">
+                <span class="movie-name">Звёздные войны XXIII: Атака клонированных клонов</span>
+                <span class="movie-duration">130 минут</span>
+              </div>
+              <button class="trashcan movie-trashcan"></button>
+            </div>-->
+
+          </div>
+
+          <div class="seances-timeline__wrapper">
+
+            <!-- <div class="seances-timeline-hall__wrapper">
+              <h3 class="seances-timeline-hall">Зал 1</h3>
+              <div class="seances-timeline">
+                <div class="seances-movie" id="seances-movie-1" draggable="true">
+                  <div class="seances-movie-text">Миссия выполнима</div>
+                  <div class="seances-movie-start">00:00</div>
+                </div>
+                <div class="seances-movie" id="seances-movie-2" draggable="true">
+                  <div class="seances-movie-text">Миссия выполнима</div>
+                  <div class="seances-movie-start">12:00</div>
+                </div>
+                <div class="seances-movie" id="seances-movie-3" draggable="true">
+                  <div class="seances-movie-text">Звёздные войны XXIII: Атака клонированных клонов</div>
+                  <div class="seances-movie-start">14:00</div>
+                </div>
+              </div>
+            </div> -->
+
+          </div>
+
+        </div>
+
+        <div class="btns-wrapper">
+          <button id="cancel-seances-btn" class="btn cancel seances-btn">Отмена</button>
+          <button id="save-seances-btn" class="btn save seances-btn">Сохранить</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="conf-step">
+      <header class="heading-2">
+        <h2 class="h2">Открыть продажи</h2>
+      </header>
+      <div class="conf-step__wrapper">
+        <div class="conf-step-content">
+
+          <div>
+            <h3>Выберите зал для открытия/закрытия продаж:</h3>
+            <ul class="selectors open-hall-selectors">
+            </ul>
+
+            <p class="ready visually-hidden">Всё готово к открытию</p>
+          </div>
+
+        </div>
+
+        <div class="btn-wrapper">
+          <button id="btn-hall-open" class="btn btn-center visually-hidden">Открыть продажу билетов</button>
+          <button id="btn-hall-close" class="btn btn-center visually-hidden">Приостановить продажу билетов</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+  <!-- <script src="site.js"></script> -->
+
+  <script src="js/admin.js"></script>
+  <script src="js/hall.js"></script>
+  <script src="js/film.js"></script>
+  <script src="js/seance.js"></script>
+
+
+</body>
+
+</html>

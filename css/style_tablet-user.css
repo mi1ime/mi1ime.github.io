@@ -1,0 +1,49 @@
+@media (min-width: 641px) and (max-width: 1200px) {
+
+    .header {
+        width: 768px;
+    }
+
+    /* index */
+
+    nav {
+        width: 768px;
+    }
+
+    .nav-section,
+    .today-section {
+        min-width: 77px;
+    }
+
+    .movies {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .movie-info,
+    .movie-seances__hall {
+        width: 738px;
+    }
+
+    /* hall */
+
+    .main-section {
+        width: 768px;
+    }
+
+    .buying__info-description {
+        width: 530px;
+    }
+
+    /* payment + ticket */
+
+    .heading-2 {
+        width: 768px;
+    }
+
+    .ticket__info,
+    .ticket__add-info {
+        width: 738px;
+    }
+}

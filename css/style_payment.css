@@ -1,0 +1,130 @@
+/* payment */
+
+.body {
+  background-position: center;
+}
+
+.heading-2 {
+  background-color: rgba(241, 235, 230, 0.95);
+
+  position: relative;
+}
+
+.heading-2:before {
+  position: absolute;
+  height: 3px;
+
+  background-image: url(../img/edge-before.png);
+  background-repeat: repeat;
+  background-size: 10px 3px;
+
+  content: "";
+  top: -3px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+.heading-2:after {
+  position: absolute;
+  height: 3px;
+
+  background-image: url(../img/edge-after.png);
+  background-repeat: repeat;
+  background-size: 10px 3px;
+
+  content: "";
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgba(241, 235, 230, 0.95);
+  margin-top: 6px;
+  padding-top: 30px;
+
+  position: relative;
+}
+
+.main-section:before {
+  position: absolute;
+  height: 3px;
+
+  background-image: url(../img/edge-before.png);
+  background-repeat: repeat;
+  background-size: 10px 3px;
+
+  content: "";
+  top: -3px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+.main-section:after {
+  position: absolute;
+  height: 3px;
+
+  background-image: url(../img/edge-after.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 10px 3px;
+
+  content: "";
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+.heading-2 {
+  padding: 25px 15px 25px 15px;
+}
+
+.heading-3 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.ticket__info {
+  width: 360px;
+  padding-left: 15px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 11px;
+}
+
+.ticket__info>* {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.ticket__add-info {
+  width: 360px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.get-code {
+  margin: 30px auto 30px auto;
+  padding: 11px 53px 11px 53px;
+}

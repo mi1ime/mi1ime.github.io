@@ -1,0 +1,43 @@
+html:before {
+    height: 100vh;
+}
+
+.heading-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section {
+    width: 390px;
+    background-color: #EAE9EBF2;
+}
+
+form {
+    margin-left: 58px;
+    margin-right: 58px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6px;
+}
+
+.email {
+    margin-bottom: 6px;
+}
+
+input {
+    width: 254px;
+}
+
+.authorization {
+    width: 189px;
+}

@@ -1,0 +1,190 @@
+/* index */
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login {
+  width: 71px;
+  height: 40px;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+nav {
+  width: 390px;
+  min-height: 58px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-sections {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1px;
+  align-items: center;
+}
+
+.nav-section {
+  min-width: 30px;
+  height: 27px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: content-box;
+  padding: 10px;
+
+  cursor: pointer;
+  box-shadow: 0px 0px 2px #0000001F;
+  box-shadow: 0px 2px 2px #0000003D;
+
+  position: relative;
+}
+
+.nav-section>* {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.nav-section:before {
+  position: absolute;
+
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  opacity: 0.90;
+  z-index: -1;
+}
+
+.today-section {
+  min-width: 46px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  column-gap: 2px;
+}
+
+.today {
+  flex-basis: 100%;
+}
+
+.section-selected {
+  width: 100%;
+  height: 32px;
+}
+
+.section-selected>* {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.section-selected:before {
+  opacity: 1;
+}
+
+.arrow>* {
+  font-family: Consolas, monaco, monospace;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+
+  text-align: center;
+}
+
+.movies {
+  width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movie {
+  padding: 15px;
+  margin-top: 30px;
+  background-color: rgba(241, 235, 230, 0.95);
+}
+
+.movie-info {
+  display: flex;
+  min-height: 175px;
+  width: 360px;
+}
+
+.movie-poster {
+  width: 125px;
+  height: 175px;
+  margin-right: 15px;
+}
+
+.movie-synopsis {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.halls {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.hall {
+  height: 18px;
+  margin-bottom: 2px;
+  ;
+}
+
+.movie-seances {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  flex-wrap: wrap;
+
+  padding-bottom: 4px;
+}
+
+.movie-seance-time {
+  width: 53px;
+  height: 33px;
+  font-size: 15px;
+  line-height: 17px;
+  
+  background-color: #FFFFFF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  box-shadow: 0px 0px 2px #0000001F;
+  box-shadow: 0px 2px 2px #0000003D;
+
+  position: relative;
+}
+
+.movie-seance-time:before {
+  position: absolute;
+
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 2px;
+  z-index: -1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

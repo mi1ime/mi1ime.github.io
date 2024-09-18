@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Diplom</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_login.css">
+  <link rel="stylesheet" href="css/style_tablet.css">
+  <link rel="stylesheet" href="css/style_desktop.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <h1>Идём<span class="logo-V">в</span>кино</h1>
+      <div class="logo-admin">Администраторррская</div>
+    </div>
+
+  </header>
+
+  <main>
+
+    <div class="main-section">
+
+      <header class="heading-2 authorization-header">
+        <h2>Авторизация</h2>
+      </header>
+
+      <form>
+
+        <div class="form-wrapper email">
+          <label for="email" class="form-text">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="example@domain.xyz">
+        </div>
+        <div class="form-wrapper">
+          <label for="password" class="form-text">Пароль</label>
+          <input type="password" id="password" name="password">
+        </div>
+
+        <button class="btn authorization" onclick="getData()">Авторизоваться</button>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <script src="js/login.js"></script>
+
+</body>
+
+</html>

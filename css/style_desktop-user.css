@@ -1,0 +1,68 @@
+@media (min-width: 1201px) {
+
+    .header {
+        width: 990px;
+    }
+
+    /* index */
+
+    nav {
+        width: 990px;
+    }
+
+    .nav-section,
+    .today-section {
+        min-width: 104px;
+    }
+
+    .movies {
+        width: 990px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .movie-info,
+    .movie-seances__hall {
+        width: 960px;
+    }
+
+    .movie {
+        border-radius: 2px;
+    }
+
+    /* hall */
+
+    .main-section {
+        width: 990px;
+    }
+
+    .border-rad {
+        border-radius: 2px;
+    }
+
+    .buying__info-description {
+        width: 960px;
+    }
+
+    .buying__info-hint {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    /* payment + ticket */
+
+    .heading-2 {
+        width: 990px;
+    }
+
+    .ticket__info,
+    .ticket__add-info {
+        width: 960px;
+    }
+}
