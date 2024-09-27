@@ -1,8 +1,8 @@
 let chosenSeanceId = Number(localStorage.getItem('chosenSeanceId'));
 let places = localStorage.getItem('places');
-// let totalCost = localStorage.getItem('totalCost');
+let codedTicket = localStorage.getItem('codedTicket');
 
-document.getElementById('qrcode').append(QRCreator('1').result);
+document.getElementById('qrcode').append(QRCreator(`${codedTicket}`).result);
 
 fetch('https://shfe-diplom.neto-server.ru/alldata')
     .then(response => response.json())

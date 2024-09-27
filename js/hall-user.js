@@ -80,12 +80,10 @@ fetch('https://shfe-diplom.neto-server.ru/alldata')
 
           console.log(tickets);
 
-          // В задании вместо cost указано coast. Не знаю, ошибка ли это. Пробовала и так постить - не принимает.
-
           const params = new FormData();
           params.set('seanceId', Number(chosenSeanceId));
           params.set('ticketDate', seanceDate);
-          params.set('tickets', tickets);
+          params.set('tickets', JSON.stringify(tickets));
           fetch('https://shfe-diplom.neto-server.ru/ticket', {
             method: 'POST',
             body: params
@@ -93,7 +91,25 @@ fetch('https://shfe-diplom.neto-server.ru/alldata')
             .then(response => response.json())
             .then(data => {
               if (data.success === true) {
+                let toBeCodedTickets = data.result;
+                let codedRow = 0;
+                let codedPlace = 0;
+                let codedRowsPlaces = [];
+                for (i = 0; i < toBeCodedTickets.length; i++) {
+                  codedRow = toBeCodedTickets[i].ticket_row;
+                  codedPlace = toBeCodedTickets[i].ticket_place;
+                  codedRowsPlaces.push(`${codedRow}/${codedPlace}`);
+                }
+
+                let codedTicket = `Фильм: ${movieTitle.innerHTML}
+Дата: ${seanceDate.split('-').reverse().join('.')}
+Время: ${seanceStartTime.innerHTML}
+Ряд/Место: ${codedRowsPlaces.join(', ')}`;
+                
+                localStorage.setItem('codedTicket', codedTicket);
+
                 window.location.href = 'payment.html';
+
               } else {
                 console.log(data);
               }
